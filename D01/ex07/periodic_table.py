@@ -27,7 +27,8 @@ def periodic_table():
         if int(pos) == 18:
             row += '</tr>'
         prev = pos
-    html = f''' <html><head><title>periodic table</title>
+    html = f''' <!DOCTYPE html>
+<html lang = 'en'><head><title>periodic table</title>
     <style>
         table, tr, td{{
             border: 1px solid black;

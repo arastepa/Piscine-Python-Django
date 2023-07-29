@@ -1,0 +1,19 @@
+Collecting git+https://github.com/jaraco/path.py.git
+  Cloning https://github.com/jaraco/path.py.git to /tmp/pip-req-build-cilfp6ks
+  Resolved https://github.com/jaraco/path.py.git to commit 47b0b282631655f3672c725841465f82dfd2f039
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: path
+  Building wheel for path (pyproject.toml): started
+  Building wheel for path (pyproject.toml): finished with status 'done'
+  Created wheel for path: filename=path-16.7.2.dev4+g47b0b28-py3-none-any.whl size=24847 sha256=8c5081192912429eb437664c5000fda41e1bbb5c0cb15bf95cf7b5b856e7e316
+  Stored in directory: /tmp/pip-ephem-wheel-cache-cdymsv6p/wheels/6f/2d/b2/024320ff62a970370a258367776fcf4521b491380f46e738f3
+Successfully built path
+Installing collected packages: path
+Successfully installed path-16.7.2.dev4+g47b0b28

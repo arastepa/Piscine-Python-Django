@@ -1,0 +1,78 @@
+{%extends 'base.html'%}{%load static%}
+{%block title%}
+
+<title>Ex01: Display process of a static page</title>
+
+{%endblock title%}
+{%block content%}
+<h1>Display process of a static page</h1>
+<p>
+    <p>
+        1. User Sends a Request:
+        The process begins when a user enters a URL in their web browser or clicks a link that points to the specific URL of
+        the static web page. The browser sends an HTTP GET request to the web server.
+    </p>
+    <p>
+        2. Web Server Receives the Request:
+        The web server, which could be Apache, Nginx, or another server software, receives the incoming HTTP request.
+    </p>
+    <p>    
+        3. URL Routing:
+        The web server examines the URL of the request and determines which application or view should handle it. In the
+        context of Django, there is a configuration file (usually urls.py) that maps URLs to specific view functions.
+    </p>
+    <p>
+
+        4. View Function Handling:
+        The view function associated with the URL in question is invoked. This view function is responsible for processing
+        the request and generating a response. In this case, since you're dealing with a static web page, the view doesn't
+        need to perform any database queries or complex logic.
+    </p>
+    <p>
+
+        5. Template Rendering:
+        Within the view function, if a template is involved, the template engine is used to render the template. A template
+        is essentially an HTML file with placeholders for dynamic content. The template engine replaces these placeholders
+        with actual data. In Django, the built-in template engine uses a syntax that allows for variable substitution,
+        loops, conditionals, and more.
+    </p>
+    <p>
+
+        6. Generating the Response:
+        Once the template is rendered and the dynamic data (if any) is inserted, the view function creates an HTTP response
+        object. This response object contains the final HTML content that the browser will display.
+    </p>
+    <p>
+
+        7. Sending the Response:
+        The response is sent back to the web server by the view function, which then forwards it to the user's browser as an
+        HTTP response.
+    </p>
+    <p>
+
+        8. Browser Receives and Renders:
+        The user's browser receives the HTTP response containing the HTML content. It processes the HTML, along with any
+        included CSS and JavaScript, to render the web page on the user's screen.
+    </p>
+    <p>
+
+        9. Displaying the Web Page:
+        The static web page, generated from the template and processed by the view, is now displayed to the user in their
+        browser. The user can see the content and interact with any client-side elements.
+    </p>
+    <p>
+        10. User Interaction:
+        If the static web page contains any interactive elements like forms, buttons, or links, the user can interact with
+        them. This might lead to more requests being sent to the server, starting the process again for a different URL or
+        action.
+    </p>
+    <p>
+
+        In summary, the process involves the user's request being handled by a view function that renders a template (if
+        needed) and generates an HTML response. This response is then sent back to the user's browser, which renders the
+        static web page for the user to see and interact with.
+    </p>
+
+</p>
+
+{%endblock%}

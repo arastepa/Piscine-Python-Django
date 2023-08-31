@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block title%} {%endblock%}
+    {% block style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}" />
+    {% endblock style %}
+    <style>
+        p{
+            font-size: 30px;
+        }
+        h1{
+            color:green;
+            text-align: center;
+        }
+        body{
+            margin: 10px;
+            font-size: 30px;
+        }
+        .menu{
+            list-style-type: none;
+        }
+        .menu li{
+            float: left;
+            margin: 5px;
+        }
+        .menu li a{
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+<body>
+    {%include 'nav.html'%}
+    <br>
+    {%block content%}
+
+    {%endblock%}
+</body>
+
+</html>

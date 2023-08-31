@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex00: Markdown Cheatsheet</title>
+</head>
+<style>
+    table {
+        font-size: 30px;
+        text-align: center;
+        border: 1px solid black;
+        margin: auto;
+        vertical-align: middle;
+    }
+    body {
+        font-family: sans-serif;
+    }
+    table,
+    th,
+    tr,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    table th {
+        width: 25%;
+    }
+    .highlight {
+        background-color: gold;
+        font-weight: bold;
+    }
+    thead {
+        background-color: #333;
+        color: white;
+	    text-transform: uppercase;
+	    letter-spacing: 2%;
+    }
+    tbody th{
+        background-color: #36c;
+        color: #fff;
+        text-align: left;
+    }
+</style>
+
+<body>
+    <h1 style="text-align: center;">Markdown Quick Reference Cheat Sheet</h1>
+    <table width="600px;">
+        <thead>
+            <th>Action</th>
+            <th>Markdown</th>
+            <th>Processes</th>
+        </thead>
+        <tbody>
+
+            <tr>
+                <th>Emphasis</th>
+            <td>
+                <pre>*Emphasize* <br> **Strong**</pre>
+            </td>
+            <td><strong>strong</strong><br><em>Emphasis</em></td>
+        </tr>
+        <tr>
+            <th class = "highlight">Bullet List</th>
+            <td>
+                * Item <br>
+                * Item <br>
+                - Item <br>
+                - Item
+            </td>
+            <td>
+                <ul>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>Numbered List</th>
+            <td>
+                <pre>1. Item <br>2. Item</pre>
+            </td>
+            <td>
+                <ol>
+                    <li>Item</li>
+                    <li>Item</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <th>Mixed List</th>
+            <td>
+                <pre>1.Item <br>2.Item <br> *mixed <br>*mixed</pre>
+            </td>
+            <td>
+                <ol>
+                    <li>
+                        Item
+                    </li>
+                    <li>
+                        Item
+                        <ul>
+                            <li>mixed</li>
+                            <li>mixed</li>
+                        </ul>
+                    </li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <th>Headers</th>
+            <td>
+                <pre>#Header1 <br>##Header2 <br>###Header3 <br>####Header4<pre></td>
+                    <td>
+                        <h1>Header1</h1>
+                        <h2>Header2</h2>
+                        <h3>Header3</h3>
+                        <h4>Header4</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Abbreviations</th>
+                    <td><pre>Markdown converts text to HTML. <br>*[HTML]: HyperText Markup Languagee></pre>
+                    </td>
+                    <td>Markdown converts text to HTML.</td>
+                </tr>
+            </tbody>
+    </table>
+</body>
+
+</html>

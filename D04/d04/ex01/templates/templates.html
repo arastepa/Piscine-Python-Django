@@ -1,0 +1,90 @@
+{%extends 'base.html'%}{% load static %}
+{%block title%}
+
+<title>Ex01: Template engine</title>
+
+{%endblock title%}
+
+{% block style %}
+    <link rel="stylesheet" type="text/css" href="{%static 'style2.css' %}" />
+{% endblock style %}
+{%block content%}
+<h1> Template engine</h1>
+<p>
+    Django's default template engine is a component of the Django web framework that enables the creation and rendering
+    of dynamic web pages. It allows developers to separate the presentation layer from the business logic of a web
+    application by using template files that include placeholders for dynamic content and control structures. Let's dive
+    into the functioning of Django's default template engine:
+
+    <p>
+
+        p1. Template Creation:
+        Developers create HTML templates by embedding Django template tags and variables within the HTML code. Template tags
+        are enclosed in &#123;&#37; &#37;&#125; and are used for control flow and logic, while template variables are enclosed in &#123;&#123; &#125;&#125; and
+        are used to display dynamic data.
+    </p> 
+    <p>
+
+        2. Template Loading:
+        Django's template engine includes a template loader that determines where to find template files. It searches in
+        predefined locations, including application-specific template directories and the project's global template
+        directory. This allows for modularity and organization of templates.
+    </p>
+    <p>
+
+        3. Context Data:
+        When rendering a template, developers provide a context dictionary containing data that the template needs. The
+        context dictionary holds key-value pairs where the keys are the variable names used in the template and the values
+        are the actual data. This context data is used to populate the template with dynamic content.
+    </p>
+    <p>
+
+        4. Template Tags and Filters:
+        Django's template engine offers a wide range of built-in template tags and filters. Template tags provide control
+        flow mechanisms like loops (for and while) and conditionals (if), enabling dynamic content generation. Filters
+        modify the output of variables by applying functions like date formatting, string manipulation, and more.
+    </p> 
+    <p>
+
+        5. Template Inheritance:
+        Django's template engine supports template inheritance, promoting the creation of reusable and consistent UI
+        components. Developers can define a base template with common structure and placeholders, and then create child
+        templates that extend the base template. This encourages the DRY (Don't Repeat Yourself) principle.
+    </p> 
+    <p>
+
+        6. Rendering Process:
+        When a view function is executed and a template needs to be rendered, the template engine processes the template
+        file. It interprets template tags, variables, and control structures, and substitutes them with actual data from the
+        context dictionary. This process generates a final HTML output.
+    </p>    
+    <p>
+
+        7. Caching Mechanism:
+        To enhance performance, Django's template engine includes a caching mechanism. Once a template is rendered, it can
+        be cached so that subsequent requests for the same template with the same context data don't need to be re-rendered.
+        This improves response times for frequently accessed templates.
+        
+    </p>
+    <p>
+
+        8. Generating the Response:
+        After the template engine has processed the template and inserted dynamic data, the view function creates an HTTP
+        response containing the final HTML output. This response is then sent back to the user's browser for rendering.
+    </p>
+    <p>
+
+        9. User Interaction:
+        If the rendered HTML includes forms, buttons, or links, users can interact with these elements. Subsequent
+        interactions trigger new requests to the server, restarting the process as needed.
+    </p>  
+    <p>
+
+        In summary, Django's default template engine facilitates the creation of dynamic web pages by allowing developers to
+        combine HTML structure with dynamic content using template tags, variables, and control structures. This separation
+        of concerns makes it easier to maintain, update, and collaborate on web applications, while also providing tools for
+        creating efficient and reusable templates.
+    </p>
+</p> 
+
+{%endblock%}

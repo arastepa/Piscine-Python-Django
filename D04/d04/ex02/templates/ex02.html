@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex02 Page</title>
+</head>
+<body>
+    <h1>Input Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Input History</h2>
+    <ul>
+        {% for entry in input_history %}
+            <li>{{ entry|linebreaks }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

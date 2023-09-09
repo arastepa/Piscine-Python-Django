@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ex06_movies Data</title>
+</head>
+<body>
+    <h1>ex06_movies Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Episode Number</th>
+                <th>Title</th>
+                <th>Opening Crawl</th>
+                <th>Director</th>
+                <th>Producer</th>
+                <th>Release Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if data %}
+                {% for item in data %}
+                <tr>
+                    <td>{{ item.0 }}</td>
+                    <td>{{ item.1 }}</td>
+                    <td>{{ item.2 }}</td>
+                    <td>{{ item.3 }}</td>
+                    <td>{{ item.4 }}</td>
+                    <td>{{ item.5 }}</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="6">No data available</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</body>
+</html>

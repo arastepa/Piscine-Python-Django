@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character List</title>
+</head>
+<body>
+    <h1>Character List</h1>
+    <table border = "1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Homeworld</th>
+                <th>Climate</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for character_data in characters_data %}
+            <tr>
+                <td>{{ character_data.0 }}</td>
+                <td>{{ character_data.1 }}</td>
+                <td>{{ character_data.2 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

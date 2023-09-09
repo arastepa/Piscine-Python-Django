@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+
+  database:
+    image: postgres
+    container_name: database
+    restart: on-failure
+    environment:
+      POSTGRES_DB: ex00_movies
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - 5432:5432

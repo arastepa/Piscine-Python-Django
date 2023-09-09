@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Movie</title>
+</head>
+<body>
+    <h1>Remove Movie</h1>
+    
+    {% if movies %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Select a movie to remove:</label>
+        <select name="title" id="title">
+            {% for movie in movies %}
+            <option value="{{ movie.1}}">{{ movie.1 }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" name="remove" value="Remove">
+    </form>
+    {% else %}
+    <p>No data available</p>
+    {% endif %}
+    
+</body>
+</html>

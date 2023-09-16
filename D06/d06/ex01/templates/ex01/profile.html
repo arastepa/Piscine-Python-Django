@@ -1,0 +1,52 @@
+{% extends 'ex01/base.html' %}
+{% block content %}
+
+<button type="button" class="btn btn-primary m-auto  " data-bs-toggle="modal" data-bs-target="#createTipModal">
+    Create Tip
+</button>
+
+<!-- Create Tip Modal -->
+<div class="modal fade" id="createTipModal" tabindex="-1" aria-labelledby="createTipModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createTipModalLabel">Create Tip</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="post" action="{% url 'profile' %}">
+                {% csrf_token %}
+                <div class="modal-body">
+                    <!-- Add your modal content here -->
+                    <!-- <input type="text"> -->
+                    {{ form.as_p }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4">
+    <h2>Existing Tips</h2>
+        {% for tip in tips %}
+            <div class="tip-{{tip.id}}">
+                <p>{{ tip.content }}</p>
+                <p>Upvotes: <span class="upvote-count-{{tip.id}}">{{ tip.upvotes.count }}</span></p>
+                <p>Downvotes: <span class = "downvote-count-{{tip.id}}">{{ tip.downvotes.count }}</span></p>
+                <button class="upvote-button" data-tip-id="{{ tip.id }}" {% if not user.is_authenticated %}disabled{% endif %}>Upvote</button>
+                <button class="downvote-button" data-tip-id="{{ tip.id }}" {% if not user.is_authenticated %}disabled{%endif %}>Downvote</button>
+                {% if user == tip.author %}
+                    <button class="delete-button" data-tip-id="{{ tip.id }}">Delete</button>
+                {% endif %}
+            </div>
+        {% empty %}
+            <div class = "tip">
+                <li>No tips available</li>
+            </div>
+        {% endfor %}
+</div>
+
+{% endblock %}
